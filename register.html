@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Dashboard</title>
+
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./assets/plugins/fontawesome-free/css/all.min.css">
+
+  <!-- Ionicons -->
+  <link rel="stylesheet"
+    href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet"
+    href="./assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+
+  <!-- iCheck -->
+  <link rel="stylesheet"
+    href="./assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+  <!-- JQVMap -->
+  <link rel="stylesheet"
+    href="./assets/plugins/jqvmap/jqvmap.min.css">
+
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet"
+    href="./assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+  <!-- Daterange picker -->
+  <link rel="stylesheet"
+    href="./assets/plugins/daterangepicker/daterangepicker.css">
+
+  <!-- summernote -->
+  <link rel="stylesheet"
+    href="./assets/plugins/summernote/summernote-bs4.min.css">
+
+  <!-- DataTables -->
+  <link rel="stylesheet"
+    href="./assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+
+  <link rel="stylesheet"
+    href="./assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+
+  <link rel="stylesheet"
+    href="./assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./assets/dist/css/adminlte.min.css">
+
+
+
+
+
+  
+
+    <!-- Bootstrap -->
+  <link rel="stylesheet"
+        href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet"
+        href="./assets/plugins/fontawesome-free/css/all.min.css">
+
+  <style>
+
+    body{
+      background:#f4f6f9;
+      font-family: 'Sarabun', sans-serif;
+    }
+
+    .login-box{
+      width:500px;
+      margin:40px auto;
+    }
+
+    .card{
+      border-radius:4px;
+      overflow:hidden;
+      border:none;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .card-header{
+      background:#007bff;
+      color:#fff;
+      text-align:center;
+      padding:25px 20px;
+      border:none;
+    }
+
+    .card-header img{
+      width:45px;
+      margin-bottom:10px;
+    }
+
+    .card-header h3{
+      font-size:28px;
+      margin:0;
+      font-weight:500;
+    }
+
+    .card-body{
+      padding:25px;
+      background:#fff;
+    }
+
+    .form-control{
+      height:45px;
+      border-radius:2px;
+    }
+
+    .btn-login{
+      background:#007bff;
+      color:#fff;
+      border:none;
+      padding:8px 20px;
+      border-radius:2px;
+      font-size:14px;
+    }
+
+    .btn-login:hover{
+      background:#0069d9;
+      color:#fff;
+    }
+
+    .register-link{
+      margin-top:15px;
+      display:block;
+      color:#666;
+      font-size:14px;
+    }
+
+  </style>
+
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+
+
+
+  <section class="content pt-4">
+
+    <div class="container-fluid">
+
+      <div class="row justify-content-center">
+
+        <div class="col-md-10">
+
+          <!-- CARD -->
+          <div class="card card-outline card-secondary">
+
+            <!-- HEADER -->
+            <div class="card-header text-center">
+
+              <img src="./assets/dist/img/"
+                   width="45"
+                   class="mb-2">
+
+              <h3 class="card-title d-block"
+                  style="float:none;font-size:28px;font-weight:600;">
+                ลงทะเบียนเข้าใช้งานระบบ
+              </h3>
+
+            </div>
+
+            <!-- BODY -->
+            <div class="card-body">
+
+              <form action="" method="POST">
+
+                <!-- เลขบัตร -->
+                <div class="form-group">
+                  <label>เลขประจำตัวประชาชน</label>
+
+                  <input type="text"
+                         class="form-control"
+                         placeholder="กรอกเลขบัตรประชาชน">
+                </div>
+
+                <!-- ชื่อ -->
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+
+                      <label>ชื่อจริง</label>
+
+                      <input type="text"
+                             class="form-control"
+                             placeholder="ชื่อจริง">
+
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+
+                      <label>นามสกุล</label>
+
+                      <input type="text"
+                             class="form-control"
+                             placeholder="นามสกุล">
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- SECTION -->
+                <div class="border p-2 mb-3 bg-light">
+                  <strong>ข้อมูลพื้นฐาน</strong>
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="row">
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label>Password</label>
+
+                      <input type="password"
+                             class="form-control"
+                             placeholder="Password">
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label>Confirm password</label>
+
+                      <input type="password"
+                             class="form-control"
+                             placeholder="Confirm Password">
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="row">
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label>Email</label>
+
+                      <input type="email"
+                             class="form-control"
+                             placeholder="Email">
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label>หมายเลขโทรศัพท์</label>
+
+                      <input type="text"
+                             class="form-control"
+                             placeholder="เบอร์โทรศัพท์">
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- SELECT -->
+                <div class="row">
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label>กลุ่มผู้ใช้งาน</label>
+
+                      <select class="form-control">
+                        <option>- กรุณาเลือก -</option>
+                        <option>Admin</option>
+                        <option>User</option>
+                      </select>
+
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label>หน่วยงานต้นสังกัด</label>
+
+                      <select class="form-control">
+                        <option>- กรุณาเลือกหน่วยงานต้นสังกัด -</option>
+                      </select>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- จังหวัด -->
+                <div class="row">
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label>จังหวัดหน่วยงาน</label>
+
+                      <select class="form-control">
+                        <option>- กรุณาเลือกจังหวัด -</option>
+                      </select>
+
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label>สำนักงานเขตพื้นที่</label>
+
+                      <select class="form-control">
+                        <option>- กรุณาเลือกสำนักงานเขต -</option>
+                      </select>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- โรงเรียน -->
+                <div class="form-group">
+
+                  <label>โรงเรียน/สถานศึกษา</label>
+
+                  <select class="form-control">
+                    <option>- กรุณาเลือกโรงเรียน -</option>
+                  </select>
+
+                </div>
+
+                <!-- BUTTON -->
+                <div class="text-center mt-4">
+
+                  <button type="submit"
+                          class="btn btn-primary px-5">
+
+                    ลงทะเบียนใช้งานระบบ
+
+                  </button>
+
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
