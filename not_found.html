@@ -142,10 +142,8 @@
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-
-
-
-<div class="wrapper">
+  
+  <div class="wrapper">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -167,21 +165,21 @@
 
       <!-- User -->
       <li class="nav-item mr-2">
-        <a href="login.html"
+        <a href="#"
            class="btn btn-success btn-sm">
 
           <i class="fas fa-user mr-1"></i>
-          เข้าสู่ระบบ
+          รูปแอดมิน
         </a>
       </li>
 
       <!-- System -->
       <li class="nav-item">
-        <a href="register.html"
+        <a href="#"
            class="btn btn-primary btn-sm">
 
           <i class="fas fa-users mr-1"></i>
-          ลงทะเบียนใช้งานระบบ
+          ออกจากระบบ
         </a>
       </li>
 
@@ -189,6 +187,7 @@
 
   </nav>
   <!-- /.navbar -->
+  
 
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-light-success elevation-2">
@@ -377,155 +376,316 @@
 </aside>
 
 
+
+<!-- Content Wrapper -->
 <div class="content-wrapper">
 
-  <!-- Header -->
-  <section class="content-header">
+  <!-- Main content -->
+  <section class="content pt-3">
 
     <div class="container-fluid">
 
-      <h1 class="text-center">
-        ข้อมูลของผู้ใช้งาน
-      </h1>
 
-    </div>
+<!-- ตาราง -->
+<div class="row">
+  <div class="col-12">
 
-  </section>
+    <div class="card">
 
-  <!-- Content -->
-  <section class="content">
+      <div class="card-header">
+        <h3 class="card-title">ข้อมูลนักศึกษา</h3>
+      </div>
 
-    <div class="container-fluid">
+      <div class="card-body">
 
-      <div class="row justify-content-center">
+        <table id="example1" class="table table-bordered table-striped">
 
-        <div class="col-md-8">
+          <thead class="bg-success text-white">
+            <tr>
+              <th>รหัสโรงเรียน</th>
+              <th>ชื่อโรงเรียน</th>
+              <th>เลขประจำตัว</th>
+              <th>ชื่อ</th>
+              <th>นามสกุล</th>
+              <th>ชั้นปัจจุบัน</th>
+              <th>สถานะการติดต่อ</th>
+              <th>ที่ตั้ง</th>
+            </tr>
+          </thead>
 
-          <div class="card">
+          <tbody>
 
-            <div class="card-body">
+            <!-- ROW 1 -->
+            <tr>
+              <td>1010720040</td>
+              <td>สตรีวิทยา</td>
+              <td>50669</td>
+              <td>ชนิษา</td>
+              <td>สุขใส</td>
+              <td>มัธยมศึกษาปีที่ 4</td>
 
-              <!-- รูป -->
-              <div class="text-center mb-3">
+              <td>
+                <span class="badge badge-success">
+                  ติดตามแล้วพบกัน
+                </span>
+              </td>
 
-                <img src="./assets/dist/img/user4-128x128.jpg"
-                     class="img-circle elevation-2"
-                     width="80">
+              <td class="text-center">
 
-              </div>
+                <!-- ปุ่มเปิด Modal -->
+                <button class="btn btn-success btn-sm"
+                        data-toggle="modal"
+                        data-target="#mapModal">
 
-              <!-- ตาราง -->
-              <table class="table table-bordered">
-
-                <tr>
-                  <td width="30%">ชื่อ - สกุล</td>
-                  <td>สมชาย ใจดี</td>
-                </tr>
-
-                <tr>
-                  <td>Username</td>
-                  <td>admin</td>
-                </tr>
-
-                <tr>
-                  <td>Email</td>
-                  <td>admin@gmail.com</td>
-                </tr>
-
-                <tr>
-                  <td>หมายเลขบัตรประชาชน</td>
-                  <td>1234567891011</td>
-                </tr>
-
-                <tr>
-                  <td>สังกัดใช้งาน</td>
-                  <td>school</td>
-                </tr>
-
-                <tr>
-                  <td>รหัสโรงเรียน</td>
-                  <td>1010720040</td>
-                </tr>
-
-                <tr>
-                  <td>ชื่อโรงเรียน</td>
-                  <td>มหาวิทยาลัย</td>
-                </tr>
-
-                <tr>
-                  <td>ตำบล/แขวง</td>
-                  <td>บางรัก</td>
-                </tr>
-
-                <tr>
-                  <td>อำเภอ/เขต</td>
-                  <td>เขตบางรัก</td>
-                </tr>
-
-                <tr>
-                  <td>จังหวัด</td>
-                  <td>กรุงเทพมหานคร</td>
-                </tr>
-
-                <tr>
-                  <td>สำนักงานเขตพื้นที่การศึกษา</td>
-                  <td>สพป.กรุงเทพมหานคร เขต 1</td>
-                </tr>
-
-                <tr>
-                  <td>สังกัด</td>
-                  <td>
-                    สำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน
-                  </td>
-                </tr>
-
-              </table>
-
-              <!-- ปุ่ม -->
-              <div class="text-center mt-3">
-
-                <button class="btn btn-primary">
-
-                  แก้ไขข้อมูล
+                  <i class="fas fa-map-marked-alt"></i>
 
                 </button>
 
-              </div>
+              </td>
+            </tr>
 
-            </div>
+            <!-- ROW 2 -->
+            <tr>
+              <td>1010720040</td>
+              <td>สตรีวิทยา</td>
+              <td>48535</td>
+              <td>วรณัฐ</td>
+              <td>จันทร์ทิม</td>
+              <td>มัธยมศึกษาปีที่ 4</td>
 
-          </div>
+              <td>
+                <span class="badge badge-secondary">
+                  ยังไม่ได้ติดตาม
+                </span>
+              </td>
 
-        </div>
+              <td class="text-center">
+
+                <button class="btn btn-secondary btn-sm"
+                        data-toggle="modal"
+                        data-target="#mapModal">
+
+                  <i class="fas fa-map-marked-alt"></i>
+
+                </button>
+
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- แผนที่ -->
+<div class="row">
+
+  <div class="col-12">
+
+    <div class="card">
+
+      <div class="card-header">
+        <h3 class="card-title">แผนที่</h3>
+      </div>
+
+      <div class="card-body p-0">
+
+        <iframe
+          src="https://maps.google.com/maps?q=bangkok&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="500"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
 </div>
 
-<style>
+<!-- Modal -->
+<div class="modal fade" id="mapModal">
 
-.table td{
-    vertical-align: middle;
-    font-size: 14px;
-}
+  <div class="modal-dialog modal-xl">
 
-.form-control{
-    border-radius: 3px;
-}
+    <div class="modal-content">
 
-.card{
-    border-radius: 5px;
-}
+      <!-- Header -->
+      <div class="modal-header bg-light">
 
-.btn{
-    min-width: 120px;
-}
+        <h5 class="modal-title text-success">
+          ข้อมูลนักเรียน
+        </h5>
 
-</style>
+        <button type="button"
+                class="close"
+                data-dismiss="modal">
+
+          <span>&times;</span>
+
+        </button>
+
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body bg-light">
+
+        <!-- รูป -->
+        <div class="text-center mb-3">
+
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+               class="rounded-circle shadow"
+               width="90"
+               height="90">
+
+          <div class="mt-2 font-weight-bold">
+            ชนิษา สุขใส
+          </div>
+
+        </div>
+
+        <!-- ตารางข้อมูล -->
+        <table class="table table-bordered table-sm bg-white">
+
+          <tr>
+            <td width="25%">เลขประจำตัวประชาชน</td>
+            <td>1234567890123</td>
+          </tr>
+
+          <tr>
+            <td>เลขประจำตัวนักเรียน</td>
+            <td>50669</td>
+          </tr>
+
+          <tr>
+            <td>ที่อยู่ปัจจุบัน</td>
+            <td>
+              บ้านเลขที่ 99/9 แขวงบางเขน เขตบางเขน กรุงเทพมหานคร
+            </td>
+          </tr>
+
+          <tr>
+            <td>ผู้ปกครอง</td>
+            <td>สมหญิง สุขใส</td>
+          </tr>
+
+          <tr>
+            <td>เบอร์โทรผู้ปกครอง</td>
+            <td>081-234-5678</td>
+          </tr>
+
+          <tr>
+            <td>บิดา</td>
+            <td>สมชาย สุขใส</td>
+          </tr>
+
+          <tr>
+            <td>เบอร์โทรบิดา</td>
+            <td>089-888-9999</td>
+          </tr>
+
+          <tr>
+            <td>มารดา</td>
+            <td>สมหญิง สุขใส</td>
+          </tr>
+
+          <tr>
+            <td>เบอร์โทรมารดา</td>
+            <td>088-777-6666</td>
+          </tr>
+
+          <tr>
+            <td>ที่อยู่ตามทะเบียนบ้าน</td>
+            <td>
+              บ้านเลขที่ 99/9 แขวงบางเขน เขตบางเขน กรุงเทพมหานคร
+            </td>
+          </tr>
+
+          <tr>
+            <td>สถานะการติดตาม</td>
+
+            <td>
+              <span class="badge badge-success p-2">
+                ติดตามแล้วพบกัน
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>ภาพถ่ายบ้านปัจจุบัน</td>
+
+            <td>
+              ไม่มี
+            </td>
+          </tr>
+
+          <tr>
+            <td>ความเห็นถึงของชุมชน</td>
+
+            <td>
+              นักเรียนพักอาศัยอยู่กับญาติ
+            </td>
+          </tr>
+
+          <tr>
+            <td>บันทึกเมื่อ</td>
+
+            <td>
+              1/24/2022 11:58:26 AM
+            </td>
+          </tr>
+
+          <tr>
+            <td>ปรับปรุงล่าสุดโดย</td>
+
+            <td>
+              0000000000000
+            </td>
+          </tr>
+
+        </table>
+
+        <!-- ปุ่ม -->
+        <div class="text-center mb-3">
+
+          <button class="btn btn-success">
+            บันทึกการติดตาม
+          </button>
+
+        </div>
+
+        <!-- Google Map -->
+        <iframe
+          src="https://maps.google.com/maps?q=13.7563,100.5018&z=13&output=embed"
+          width="100%"
+          height="350"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
 <!-- jQuery -->
 <script src="./assets/plugins/jquery/jquery.min.js"></script>
 

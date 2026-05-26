@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>พาน้องกลับห้องเรียน | สมาชิกในระดับต้นสังกัด</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap">
+
+  <link rel="stylesheet" href="./assets/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="./assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="./assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="./assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background: #f4f6f9;
+      font-family: 'Sarabun', sans-serif;
+    }
+    .card {
+      border-radius: 4px;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .card-header {
+      background: #fff;
+      color: #333;
+      border-bottom: 1px solid #eee;
+    }
+    /* สไตล์ปุ่มแก้ไขตามภาพที่ 2 */
+    .btn-manage-user {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      color: #555;
+      padding: 8px 14px;
+      border-radius: 4px;
+    }
+    .btn-manage-user:hover {
+      background-color: #e2e6ea;
+      color: #333;
+    }
+    /* ตกแต่ง Modal อนุมัติข้อมูลตามภาพที่ 3 */
+    .modal-custom-header {
+      border-bottom: 1px solid #dee2e6;
+      padding: 15px;
+    }
+    .label-title {
+      font-weight: bold;
+      color: #666;
+    }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+
+<div class="wrapper">
+
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto align-items-center">
+      <li class="nav-item mr-2">
+        <a href="login.html" class="btn btn-warning btn-sm text-white">
+          <i class="fas fa-sign-out-alt mr-1"></i> ออกจากระบบ
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <aside class="main-sidebar sidebar-light-success elevation-2">
+    <a href="#" class="brand-link text-center">
+      <span class="brand-text font-weight-normal">พาน้องกลับห้องเรียน</span>
+    </a>
+
+    <div class="sidebar">
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>หน้าหลัก</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="school.html" class="nav-link">
+              <i class="nav-icon fas fa-university"></i>
+              <p>รายชื่อสถานศึกษา</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="not_follow.html" class="nav-link">
+              <i class="nav-icon fas fa-user-times"></i>
+              <p>ยังไม่ได้ติดตาม</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="followed.html" class="nav-link">
+              <i class="nav-icon fas fa-user-check"></i>
+              <p>ติดตามพบตัว</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="not_found.html" class="nav-link">
+              <i class="nav-icon fas fa-user-slash"></i>
+              <p>ติดตามไม่พบตัว</p>
+            </a>
+          </li>
+
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                จัดการข้อมูลผู้ใช้งาน
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="user_list.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ผู้ใช้งานทั้งหมด</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="approved_users.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>อนุมัติแล้ว</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pending_approval.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>รอการอนุมัติ</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>ออกจากระบบ</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="content-wrapper">
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 font-weight-bold">สมาชิกในระดับต้นสังกัด</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped w-100">
+                  <thead>
+                    <tr>
+                      <th>ชื่อ</th>
+                      <th>นามสกุล</th>
+                      <th>ชื่อโรงเรียน</th>
+                      <th>สังกัด</th>
+                      <th>Username</th>
+                      <th>E-mail</th>
+                      <th>หมายเลขโทรศัพท์</th>
+                      <th>สถานะ</th>
+                      <th class="text-center">จัดการ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>เอกลักษณ์</td>
+                      <td>ทิมทอง</td>
+                      <td>สตรีวิทยา</td>
+                      <td>สพม.กรุงเทพมหานคร เขต 1</td>
+                      <td>ekkalak_st</td>
+                      <td>ekkalak@mail.com</td>
+                      <td>081-234-5678</td>
+                      <td><span class="badge badge-success">อนุมัติแล้ว</span></td>
+                      <td class="text-center">
+                        <button type="button" class="btn btn-manage-user" data-toggle="modal" data-target="#modal-approve" data-name="เอกลักษณ์ ทิมทอง">
+                          <i class="fas fa-user-edit"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="main-footer text-sm">
+    <div class="float-right d-none d-sm-inline">
+      ศธ. ร่วมใจพาน้องกลับมาเรียน V. 1.0.0
+    </div>
+    <strong>Copyright &copy; 2022 <a href="#">ศูนย์พัฒนาระบบข้อมูลทางการศึกษา สนผ. สพฐ.</a></strong> All rights reserved.
+  </footer>
+</div>
+
+<div class="modal fade" id="modal-approve" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        
+        <div class="card m-0">
+          <div class="card-body p-4">
+            
+            <div class="row border-bottom py-3 align-items-center">
+              <div class="col-sm-3 label-title">ชื่อ - สกุล</div>
+              <div class="col-sm-9" id="modal-user-name">เอกลักษณ์ ทิมทอง</div>
+            </div>
+
+            <div class="row py-4 align-items-center">
+              <div class="col-sm-3 label-title">การอนุมัติ</div>
+              <div class="col-sm-9">
+                <select class="form-control border-danger" style="border: 1.5px solid #dc3545;">
+                  <option value="อนุมัติ" selected>อนุมัติ</option>
+                  <option value="ไม่อนุมัติ">ไม่อนุมัติ</option>
+                  <option value="รอการตรวจสอบ">รอการตรวจสอบ</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row pt-2">
+              <div class="col-12 text-center">
+                <button type="button" class="btn btn-primary px-4 py-2" data-dismiss="modal">บันทึกข้อมูล</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/plugins/jquery/jquery.min.js"></script>
+<script src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="./assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="./assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="./assets/dist/js/adminlte.min.js"></script>
+
+<script>
+$(function () {
+  // เปิดใช้งาน DataTables
+  $("#example1").DataTable({
+    "responsive": true,
+    "lengthChange": false,
+    "autoWidth": false,
+    "pageLength": 10,
+    "language": {
+      "search": "Search:",
+      "lengthMenu": "แสดง _MENU_ รายการ",
+      "info": "Showing _START_ to _END_ of _TOTAL_ entries",
+      "paginate": {
+        "previous": "Previous",
+        "next": "Next"
+      }
+    }
+  });
+
+  // สคริปต์สำหรับส่งค่าชื่อจากตารางไปแสดงในหน้าต่างอนุมัติ (Modal)
+  $('#modal-approve').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var username = button.data('name');
+    var modal = $(this);
+    modal.find('#modal-user-name').text(username);
+  });
+});
+</script>
+</body>
+</html>
